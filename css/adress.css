@@ -1,0 +1,61 @@
+.head-adres {
+	display: block;
+	width: 90%;
+	margin: 0 auto;
+	/*height: 100%;*/
+}
+.head-adres .row {
+	height: 30%;
+}
+.head-adres img	{
+	width: 200px;
+	margin-top: 20px;
+}
+.head-adres .title {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+.adress-box {
+	margin: 0 auto;
+	margin-top: 70px;
+	width: 90%;
+}
+.adress-box tr th {
+	width: 30%;
+}
+.adress-box tr td {
+	width: 70%;
+}
+.card-header h5 {
+	position: relative;
+}
+.favourite {
+	position: absolute;
+	top: 8px;
+	right: 50px;
+	display: inline;
+	margin-right: auto;
+}
+.favourite i.active {
+	color: #ffc107;
+}
+@media only screen and (max-width: 480px){
+	.adress-box {
+		margin-top: 40px;
+	}
+	.adress-box tr th {
+		width: 20%;
+	}
+	.adress-box tr td {
+		width: 80%;
+	}
+	input[type=search] {
+		display: none;
+	}
+	.search i {
+		display: none;
+	}
+	.logo-text h3 {
+		display: none;
+	}
+}

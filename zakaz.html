@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Avtoservis</title>
+	<link rel="icon" href="img/logo.png">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/menu.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/modal.css">
+	<link rel="stylesheet" href="css/zakaz.css">
+</head>
+<body>
+	<!-- smsIcon -->
+	<div class="message" id="smsIcon">
+		<i class="fas fa-sms fa-3x text-warning"></i>
+	</div>
+	<!-- /smsIcon -->
+
+	<div class="wrapper">
+		<div class="mobile-bars" id="mobileBars">
+			<i class="fas fa-bars"></i>
+		</div>
+
+		
+	<!-- sidebar-mini -->
+		<div class="sidebar-mini">
+			<ul class="ul-mini" id="ulMini">
+				<li id="hide"><i class="fas fa-bars"></i></li>
+				<li><a href="index.html"><i class="fas fa-home"></i></a></li>
+				<li><a href="adress.html"><i class="fas fa-map-marker-alt"></i></a></li>
+				<li><a href="zakaz.html"><i class="fas fa-pen"></i></a></li>
+				<li><a href="evacuator.html"><i class="fas fa-car-side"></i></a></li>
+			</ul>
+		</div>
+		<!-- /sidebar-mini -->
+		<!-- sidebar -->
+		<div class="sidebar" id="sidebar">
+			<i class="fas fa-times-circle" id="exit"></i>
+			<div class="text-center mt-2">
+				<img src="img/logo.png" class="logo" alt="">
+			</div>
+			<div class="logo-text text-center">
+				<h2>AvtoServis</h2>
+			</div>
+			<ul>
+				<li><a href="index.html"><i class="fas fa-home"></i>Bosh sahifa</a></li>
+				<li><a href="adress.html"><i class="fas fa-map-marker-alt"></i>Adress</a></li>
+				<li><a href="zakaz.html"><i class="fas fa-pen"></i>Murojaat</a></li>
+				<li><a href="evacuator.html"><i class="fas fa-car-side"></i>Evacuator</a></li>
+			</ul>
+		</div>
+		<!-- /sidebar -->
+
+		<!-- mainContant -->
+		<div class="main_content" id="mainContent">
+			<!-- navbar -->
+			<nav class="header-nav">
+				<div class="logotip">
+					<a href="index.html" class="logolink"><h3><img src="img/logo.png" alt="brand" class="logo"><span>AvtoServis</span></h3></a>
+				</div>
+				<ul class="header-ul">
+					<li class="search"><i class="fas fa-search"></i><input type="search" placeholder="Qidiruv...."></li>
+					<li><a class="registr-btn" href="#" id="login">Ro'yhatdan o'tish</a></li>
+					<li><a class="registr-btn" href="#" id="signup">Kirish<i class="fas fa-arrow-right"></i></a></li>
+				</ul>
+			</nav>
+			<!-- /navbar -->
+			<!-- head-zakaz -->
+			<section class="head-zakaz mt-3">
+				<div class="title">
+					Toshkentda avtoservis uskunalari
+				</div>
+				<div class="info">
+					AvtoServis.uz - bu O'zbekistondagi avtoservis uskunalarini etkazib beruvchisi. Biz ushbu sohada 2003 yildan beri ishlaymiz. Ushbu davr mobaynida o'nlab etakchi ishlab chiqaruvchilar bizning sheriklarimizga aylanishdi. Kompaniyaning doimiy mijozlari soni allaqachon yuzlab. Bundan tashqari, ularning aksariyati o'z bizneslarini bizning tayyor loyihalarimiz bilan boshlashdi. Xizmat ko'rsatish stantsiyangiz allaqachon ishlaganligidan qat'iy nazar yoki siz shunchaki avtoulovlarni ta'mirlash ustaxonasini ochishni rejalashtirmoqdamisiz, Automaster.uz saytidan Toshkentda avtoulovlarga xizmat ko'rsatish uchun uskunalar sotib olish taklifi sizga maksimal darajada yordam beradi.
+				</div>
+				<div class="title">
+					AvtoServis.uz bilan sizning imkoniyatlaringiz
+				</div>
+				<div class="info">
+					O'zbekistonda avtoservis uchun asbob-uskunalar va asbob-uskunalar etkazib berish bo'yicha 17 yillik tajriba bizga mijozlarning qiziqishlari va ehtiyojlarini batafsil o'rganishimizga imkon berdi. Biz xizmat ko'rsatishning individual yondashuvidan foydalanamiz va har bir mijoz uchun hamkorlik qilish uchun maqbul shartlarni tanlaymiz.
+
+					Bizning menejerlarimiz yirik avtoservis tarmoqlari va kichik servis stantsiyalari uchun eng yaxshi uskunalarni tanlaydilar. Katalog allaqachon tajribali kompaniyalar uchun turli xil lavozimlarni o'z ichiga oladi va biznesni noldan boshlashga imkon beradigan tayyor loyihalarni (avtoservis uchun uskunalar to'plamlari) taqdim etadi.
+				</div>
+			</section>
+			<!-- /head-zakaz -->
+			<!-- form -->
+			<div class="row">
+				<div class="col-md-8">
+					<form action="#" class="zakaz-form mb-3">
+						<!-- modal succesful -->
+						<div class="succes" id="succesDiv">
+							<i class="fas fa-times" id="exitSucces"></i>
+							<i class="fas fa-check"></i>
+							<p>Siz Navbatga quyidagi vaqtga yozildingiz</p>
+							<p id="navbatTime"></p>
+						</div>
+						<!-- /modal succesful -->
+						<div class="input-group mb-3">
+							<span class="input-group-text media-none">First and last name</span>
+							<input type="text" aria-label="First name" class="form-control" placeholder="Name" required="">
+							<input type="text" aria-label="Last name" class="form-control" placeholder="Last name" required="">
+						</div>
+						<div class="form-floating mb-3">
+							<input type="number" class="form-control" id="floatingPassword" placeholder="Telephone number" required="">
+							<label for="floatingPassword">Telephone number</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
+							<label class="form-check-label" for="inlineRadio1">Daewoo</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+							<label class="form-check-label" for="inlineRadio2">Toyota</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+							<label class="form-check-label" for="inlineRadio3">Hyundai</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option3">
+							<label class="form-check-label" for="inlineRadio4">Chevrolet</label>
+						</div>
+						<div class="box my-3 active" id="carSelect">
+
+							<select class="form-select" aria-label="Default select example" required="">
+								<option selected>Nexia</option>
+								<option value="1">Tico</option>
+								<option value="2">Matiz</option>
+								<option value="3">Damas</option>
+							</select>
+						</div>
+						<div class="box my-3 select2" id="carSelect">
+							<select class="form-select" aria-label="Default select example" required="">
+								<option selected>Toyota</option>
+								<option value="1">One</option>
+								<option value="2">Two</option>
+								<option value="3">Three</option>
+							</select>
+						</div>
+						<div class="box my-3" id="carSelect">
+							<select class="form-select" aria-label="Default select example" required="">
+								<option selected>Hyundai</option>
+								<option value="1">One</option>
+								<option value="2">Two</option>
+								<option value="3">Three</option>
+							</select>
+						</div>
+						<div class="box my-3" id="carSelect">
+							<select class="form-select" aria-label="Default select example" required="">
+								<option selected>Chevrolet</option>
+								<option value="1">One</option>
+								<option value="2">Two</option>
+								<option value="3">Three</option>
+							</select>
+						</div>
+						<select class="form-select mb-3" aria-label="Default select example" required="">
+							<option selected>Black</option>
+							<option value="1">White</option>
+							<option value="2">Red</option>
+							<option value="3">Yellow</option>
+							<option value="3">....</option>
+						</select>
+						<select class="form-select mb-3" aria-label="Default select example" required="">
+							<option selected>Hizmat turi....</option>
+							<option value="1">Kuzov</option>
+							<option value="2">Motor</option>
+							<option value="3">Salon</option>
+							<option value="3">....</option>
+						</select>
+						<div class="form-floating mb-3">
+							<input type="text" class="form-control" id="floatingInput" placeholder="Car number" required="">
+							<label for="floatingInput">Car number</label>
+						</div>
+						<div class="form-floating mb-3">
+							<textarea class="form-control" id="floatingPassword" placeholder="Murojat tasnifi"></textarea>
+							<label for="floatingPassword">Murojat tasnifi...</label>
+						</div>
+						<button type="reset" class="btn btn-warning" id="reset"><img src="img/clear.svg" alt=""></button>
+						<button type="submit" class="btn btn-warning w-25 ml-5" id="succes">Navbatga yozilish</button>
+					</form>
+
+					<!-- /reklamaMobile -->
+					<div class="reklamaMobile reklama mb-3 w-100 m-auto" id="reklamaMobile">
+						<div class="reklamaExit">
+							<i class="fas fa-times" id="reklamaExitMobile"></i>
+						</div>
+						<div class="title">
+							AvtoServis Uz sizlarga o'z hizmatlarini taklif etadi!
+						</div>
+						<div class="reklama-img">
+							<img src="img/usta.webp" alt="">
+						</div>
+						<div class="reklama-link mb-3">
+							<a href="#" target="_blank"><button class="btn btn-warning w-100">Bog'laning</button></a>
+						</div>
+						<a href="https://telegram.me/Umarov02" target="_blank">Reklama berish</a>
+					</div>
+					<!-- /reklamaMobile -->
+
+				</div>
+				<div class="col-md-4">
+					<div class="region mb-3">
+						<select class="form-select" aria-label="Default select example" id="region">
+							<option selected>Toshkent shahri</option>
+							<option value="1">Toshkent viloyati</option>
+							<option value="2">Namangan</option>
+							<option value="3">Samarqand</option>
+						</select>
+					</div>
+					<div class="district mb-3">
+						<select class="form-select" aria-label="Default select example" id="region">
+							<option selected>Yunusobod</option>
+							<option value="1">Chilonzor</option>
+							<option value="2">Yakkasaroy</option>
+							<option value="3">Mirzo Ulug'bek</option>
+						</select>
+					</div>
+					<!-- Reklama -->
+					<div class="reklama mb-3" id="reklama">
+						<div class="reklamaExit">
+							<i class="fas fa-times" id="reklamaExit"></i>
+						</div>
+						<div class="title">
+							AvtoServis Uz sizlarga o'z hizmatlarini taklif etadi!
+						</div>
+						<div class="reklama-img">
+							<img src="img/usta.webp" alt="">
+						</div>
+						<div class="reklama-link mb-3">
+							<a href="#" target="_blank"><button class="btn btn-warning w-100">Bog'laning</button></a>
+						</div>
+						<a href="https://telegram.me/Umarov02" target="_blank">Reklama berish</a>
+					</div>
+					<!-- /Reklama -->
+
+				</div>
+			</div>
+			<!-- /form -->
+
+		<!-- footer -->
+			<footer>
+				<div class="row">
+					<div class="col-md-6 col-lg-4">
+						<img src="img/logo.png" class="logo mr-2" alt="Brand">
+						<div>
+							<p><i class="fas fa-phone"></i> +998 99 826 61 13</p>
+							<p><i class="fas fa-envelope-open"></i> umarovotabek0220@gmail.com</p>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-4">
+						<h3 class="over-md">
+							Navigation
+						</h3>
+						<ul class="footer-ul">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="adress.html">Adress</a></li>
+							<li><a href="zakaz.html">Murojaat</a></li>
+							<li><a href="evacuator.html">Evacuation</a></li>
+						</ul>
+					</div>
+					<div class="col-md-6 col-lg-4">
+						<ul class="brand">
+							<li><img src="img/chevrolet.png" alt=""></li>
+							<li><img src="img/daewoo (2).png" alt=""></li>
+							<li><img src="img/toyota.png" alt=""></li>
+						</ul>
+					</div>
+					<a href="#top" class="toTop"><i class="fas fa-arrow-alt-circle-right fa-3x"></i></a>
+				</div>
+			</footer>
+			<!-- /footer -->
+		</div>
+		<!-- /mainContent -->
+	</div>
+
+
+
+
+		<!-- modal log in -->
+		<div class="modal-wrap" id="modalWrap">
+			<div class="modal-reg">
+				<div class="exit" id="exitModal"><i class="fas fa-times"></i></div>
+				<h2>Ro'yhatdan o'tish</h2>
+				<form action="#">
+					<div class="input-group mb-3">
+						<span class="input-group-text" id="basic-addon1"><i class="far fa-user"></i></span>
+						<input type="text" class="form-control" placeholder="Ismingiz" aria-label="Username" aria-describedby="basic-addon1">
+					</div>
+					<div class="input-group mb-3">
+						<span class="input-group-text" id="basic-addon1"><i class="far fa-user"></i></span>
+						<input type="text" class="form-control" placeholder="Familyangiz" aria-label="Username" aria-describedby="basic-addon1">
+					</div>
+					<div class="input-group mb-3">
+						<span class="input-group-text" id="basic-addon1"><i class="far fa-envelope"></i></span>
+						<input type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
+					</div>
+					<div class="input-group mb-3">
+						<span class="input-group-text" id="basic-addon1"><i class="fas fa-unlock-alt"></i></span>
+						<input type="password" class="form-control" placeholder="Parol" aria-label="Username" aria-describedby="basic-addon1">
+					</div>
+					<div class="form-check my-2">
+						<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+						<label class="form-check-label" for="flexCheckDefault">
+							Eslab qolish
+						</label>
+					</div>
+					<button class="btn btn-warning w-100">Kirish</button>
+				</form>
+			</div>
+		</div>
+		<!-- /modal log in -->
+		<!-- modal sign up  -->
+		<div class="modal-wrap-sign" id="modalWrapSign">
+			<div class="modal-sign">
+				<div class="exit" id="exitModalSign"><i class="fas fa-times"></i></div>
+				<h2>Kirish</h2>
+				<form action="#">
+					<div class="input-group mb-3">
+						<span class="input-group-text" id="basic-addon1"><i class="far fa-envelope"></i></span>
+						<input type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
+					</div>
+					<div class="input-group mb-3">
+						<span class="input-group-text" id="basic-addon1"><i class="fas fa-unlock-alt"></i></span>
+						<input type="password" class="form-control" placeholder="Parol" aria-label="Username" aria-describedby="basic-addon1">
+					</div>
+					<a href="#">Unutdingizmi?</a>
+	
+					<button class="btn btn-warning w-100">Ro'yhatdan o'tish</button>
+				</form>
+			</div>
+		</div>
+		<!-- /modal sign up  -->
+	<!-- modal-message -->
+	<div id="message">
+		<div class="" id="exitMessage"><i class="fas fa-times"></i></div>
+		<div class="message-header">
+			<img src="img/logo.png" class="logo" alt="Logo">	
+			<div class="message-info">
+				<h4>AvtoServis</h4>
+				<p><span></span>Biz bilan online bog'laning</p>
+			</div>
+		</div>	
+		<div class="all-message" id="allMessage">	
+			<div class="accept">
+				Assalomu aleykum! Saytimizga hush keldingiz! Sizning savollaringizga javob berishga tayyormiz. 
+				<div class="time">	
+					<span id="messageTime"></span><span>:</span><span id="messageMinut"></span>
+				</div>	
+			</div>	
+			<div class="send" id="send">	
+				<div class="time">	
+					<span id="messageTime"></span><span>:</span><span id="messageMinut"></span>
+				</div>	
+			</div>	
+		</div>
+		<div class="send-message">	
+			<!-- <form action="#"> -->
+				<input type="text" placeholder="Habarni kiriting..." id="write">
+				<button type="submit" id="writeSend"><i class="far fa-paper-plane text-info"></i></button>
+				<!-- </form> -->
+			</div>	
+		</div>
+		<!-- /modal-message -->
+
+
+		<script src="https://kit.fontawesome.com/904c5d29bb.js" crossorigin="anonymous"></script>
+		<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+		<script src="js/jquery-3.5.1.min.js"></script>
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/modal.js"></script>
+		<script src="js/reklama.js"></script>
+		<script>
+		
+		</script>
+	</body>
+	</html>

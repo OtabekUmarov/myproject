@@ -1,0 +1,95 @@
+.evacuator h2 {
+	font-weight: bold;
+}
+.evacuator-img img {
+	width: 80%;
+}
+
+/* reklamaaaaaaaaaaa */
+.reklamaMobile {
+	display: none;
+}
+.reklama {
+	background-color: #fff;
+	padding: 50px 20px;
+	overflow: hidden;
+	position: relative;
+	opacity: 1;
+	transition: opacity 1s linear;
+}
+.reklama .title {
+	margin: 5px;
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+.reklama-img {
+	width: 100%;
+	margin-bottom: 20px;
+	animation: reklama 5s ease infinite;
+}
+.reklama-img img {
+	width: 100%;
+}
+.reklamaExit {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+@keyframes reklama {
+	0% {
+		transform: translateX(0px) rotateY(0deg);
+
+	}
+	25% {
+		transform: translateX(-100px) rotateY(180deg);
+	}
+	50% {
+		transform: translateX(0px) rotateY(180deg);
+	}
+	75% {
+		transform: translateX(100px) rotateY(360deg);
+	}
+	100% {
+		transform: translateX(0px) rotateY(360deg);
+	}
+}
+@media only screen and (max-width: 1024px){
+	html {
+		font-size: 16px;
+	}
+	.evacuator {
+		padding: 2rem;
+	}
+	
+}
+@media only screen and (max-width: 768px){
+	html {
+		font-size: 16px;
+	}
+	.evacuator .row .col-md-8{
+		order: 2;
+	}
+	.evacuator .row .col-md-4{
+		order: 1;
+	}
+	.reklama {
+		display: none;
+	}
+	.reklamaMobile {
+		display: block;
+	}
+}
+
+@media only screen and (max-width: 480px){
+	.evacuator {
+		margin-top: 1rem;
+		padding: 1rem;
+	}
+	iframe {
+		height: 200px;
+	}
+	
+}
+
+
+

@@ -1,0 +1,70 @@
+.diagnost, .diagnost2, .hizmatlar {
+	display: block;
+	padding: 50px 30px;
+	background-color: #fff;
+	width: 100%;
+	overflow: hidden;
+}
+.hizmatlar {
+	padding: 30px 10px;
+}
+.diagnost2 {
+	background: rgb(255,255,255);
+	background: linear-gradient(357deg, rgba(255,255,255,1) 0%, rgba(185,187,186,1) 100%);
+}
+.title {
+	font-size: 2.2rem;
+	font-weight: bold;	
+}
+.info {
+	font-size: 1rem
+}
+.diagnost-img {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.diagnost-img img {
+	width: 120%;
+}
+.diagnost-img2 img {
+	width: 100% !important;
+}
+.hizmatlar .hizmat {
+	padding: 10px;
+	position: relative;	
+}
+.hizmatlar .hizmat img {
+	width: 100%;
+}
+.hizmatlar .hizmat h4{
+	position: absolute;
+	top: 10px;
+	left: 15px;
+	width: 60%;	
+	font-size: 0.8rem;
+	text-transform: uppercase;
+}
+@media only screen and (max-width: 1024px){
+	.title {
+		font-size: 1.6rem;
+	}
+}
+@media only screen and (max-width: 768px){
+	.diagnost2 .row .col-md-6:first-child {
+		order: 2
+	}
+	.diagnost2 .row .col-md-6:last-child {
+		order: 1
+	}
+}
+@media only screen and (max-width: 480px){
+	.main_content .header {
+		height: 13%;
+	}
+	.slideShow {
+		margin-top: 140px;
+	}
+}
